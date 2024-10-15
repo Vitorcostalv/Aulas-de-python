@@ -44,3 +44,9 @@ class RelogioApp:
          # Variáveis para controle
         self.contagem_ativa = False
         self.alarme_ativado = False
+
+        def atualizar_hora(self):
+        # Atualiza o horário atual na interface
+        agora = datetime.now().strftime("%H:%M:%S")
+        self.label_hora_atual.config(text=f"Hora atual: {agora}")
+        self.master.after(1000, self.atualizar_hora)  # Atualiza a cada segundo
