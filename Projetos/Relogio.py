@@ -40,3 +40,7 @@ class RelogioApp:
 
         self.label_alarme = tk.Label(master, text="", font=("Helvetica", 14))
         self.label_alarme.pack(pady=10)
+
+         # Variáveis para controle
+        self.contagem_ativa = False
+        self.alarme_ativado = False
